@@ -32,11 +32,11 @@ func (c *SoftwareProxy) Provide() {
 	}
 }
 
-func NewCarProxy(user *User) *SoftwareProxy {
+func NewSoftwareProxy(user *User) *SoftwareProxy {
 	return &SoftwareProxy{Software{}, user}
 }
 
 func main() {
-	soft := NewCarProxy(&User{67})
+	soft := NewSoftwareProxy(&User{67})
 	soft.Provide()
 }
